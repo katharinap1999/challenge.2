@@ -1,0 +1,351 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Unica One', sans-serif;
+}
+
+body {
+  background: #333 url("../img/bg.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  width: 1440px;
+  height: 650px;
+  margin: 0 auto;
+  background: url("../img/raster.png");
+}
+
+.interface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url("../img/interface_bg.png");
+}
+
+.interface .clock-display {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 541px;
+  font-size: 20px;
+  padding: 12px;
+  color: #fff;
+  text-align: center;
+  width: 345px;
+  height: 49px;
+  background-image: url("../img/clock_display.png");
+}
+
+.interface .clock-analog {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  margin-left: -186px;
+  width: 373px;
+  height: 373px;
+}
+
+.interface .clock-analog .clock-bg {
+  width: 373px;
+  height: 373px;
+  background: url("../img/clock_bg.png") 0 0 no-repeat;
+}
+
+.interface .clock-analog .clock-inner {
+  background: url("../img/clock_inner.png") no-repeat;
+  position: absolute;
+  top: 86px;
+  left: 85px;
+  width: 201px;
+  height: 201px;
+  overflow: hidden;
+}
+
+.interface .clock-analog .seconds-line {
+  position: absolute;
+  top: 2px;
+  left: 98px;
+  display: inline-block;
+  height: 98px;
+  width: 4px;
+  border-radius: 4px;
+  background-color: #50e3ed;
+  transform-origin: center bottom;
+  transform: rotate(45deg);
+}
+
+.interface .clock-analog .minutes-line {
+  position: absolute;
+  top: 20px;
+  left: 97px;
+  display: inline-block;
+  height: 80px;
+  width: 6px;
+  background-color: #efefef;
+  border-radius: 4px;
+  transform-origin: center bottom;
+  transform: rotate(0deg);
+}
+
+.interface .clock-analog .hours-line {
+  position: absolute;
+  top: 40px;
+  left: 96px;
+  display: inline-block;
+  height: 60px;
+  width: 8px;
+  background-color: #999;
+  border-radius: 4px;
+  transform-origin: center bottom;
+  transform: rotate(90deg);
+}
+
+.interface .clock-analog .middle-point {
+  z-index: 2;
+  position: absolute;
+  border-radius: 50%;
+  left: 92px;
+  top: 92px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+
+.interface .city-view {
+  position: absolute;
+  right: 48px;
+  bottom: 50px;
+  width: 585px;
+  height: 240px;
+  background: url("../img/city_grid.png") 0 0 no-repeat;
+}
+
+.interface .city-view .city-ruler {
+  position: absolute;
+  right: 2px;
+  top: 15px;
+  width: 16px;
+  height: 186px;
+  background: url("../img/city_ruler.png") 0 0 no-repeat;
+}
+
+.interface .city-view .city-display {
+  position: absolute;
+  top: 17px;
+  left: 70px;
+  overflow: hidden;
+  width: 421px;
+  height: 192px;
+  background-color: transparent;
+}
+
+.interface .city-view .city-display img {
+  /* transform: translate(0, 0%); tbd in JS*/
+}
+
+.interface .city-view .city-display .line {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #50e3ed;
+  width: 100%;
+}
+
+.interface .world-map {
+  position: absolute;
+  top: 38px;
+  left: 74px;
+  width: 387px;
+  height: 225px;
+  background: url("../img/world_map.png") 0 0 no-repeat;
+}
+
+.interface .world-map .dots {
+  display: inline-block;
+  position: absolute;
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.interface .world-map .dot-01 {
+  top: 65px;
+  left: 55px;
+}
+
+.interface .world-map .dot-02 {
+  top: 70px;
+  left: 190px;
+}
+
+.interface .world-map .dot-03 {
+  top: 72px;
+  right: 30px;
+}
+
+.interface .world-map .scan-line {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  /* 105 NY, 185 FRA, 335 JP  */
+  width: 27px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* ========== Weather Box ============ */
+.interface .weather-box {
+  position: absolute;
+  top: 290px;
+  left: 236px;
+  width: 305px;
+  height: 145px;
+}
+
+.interface .weather-box .weather-frame {
+  width: 135px;
+  height: 145px;
+}
+.interface .weather-box .weather-frame img {
+  width: 112px;
+  margin: 0 auto;
+}
+
+.interface .bars {
+  position: absolute;
+  background-image: url("../img/bars.png");
+  left: 74px;
+  top: 473px;
+  width: 211px;
+  height: 126px;
+}
+
+.interface .lightlines {
+  position: absolute;
+  background: url("../img/lightlines.png") no-repeat;
+  left: 59px;
+  top: 336px;
+  width: 132px;
+  height: 96px;
+}
+
+.interface .wave-graphic {
+  position: absolute;
+  background: url("../img/wave_graphic.png") no-repeat;
+  right: 232px;
+  top: 235px;
+  width: 285px;
+  height: 68px;
+}
+
+.interface .circles_1 {
+  position: absolute;
+  background: url("../img/circles_1.png") no-repeat;
+  left: 318px;
+  top: 472px;
+  width: 90px;
+  height: 120px;
+}
+
+.interface .circles_2 {
+  position: absolute;
+  background: url("../img/circles_2.png") no-repeat;
+  right: 85px;
+  top: 230px;
+  width: 105px;
+  height: 70px;
+}
+
+/* ========== Astronaut Box ============ */
+.interface .astronaut-box {
+  position: absolute;
+  right: 60px;
+  top: 37px;
+  width: 335px;
+  height: 170px;
+}
+
+.interface .astronaut-box .astronaut-frame {
+  width: 165px;
+  height: 170px;
+}
+
+/* General Settings */
+/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_multiple2 */
+.interface .frame-corners {
+  background-image: url("../img/pic-corner-lt.gif"), url("../img/pic-corner-rt.gif"), url("../img/pic-corner-lb.gif"), url("../img/pic-corner-rb.gif");
+  background-repeat: no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+  padding: 12px;
+}
+
+.interface .frame-display {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 162, 209, 0.4);
+  overflow: hidden;
+}
+
+/* ================= BUTTONS ================= */
+button:focus, a:focus {
+  outline: none;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.control_power {
+  position: absolute;
+  top: 30px;
+  left: 905px;
+}
+
+.control-left {
+  position: absolute;
+  top: 452px;
+  left: 600px;
+}
+
+.control-right {
+  position: absolute;
+  top: 452px;
+  right: 600px;
+}
+
+
+
+.btn {
+  /* http://www.colorzilla.com/gradient-editor/ */
+  background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 46%,#e1e1e1 51%,#f6f6f6 100%);
+}
+.btn.btn-round{
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,.2); 
+  background: radial-gradient(ellipse at center, #ffffff 21%,#d1d1d1 100%); 
+}
+.btn.btn-round:hover{
+  background: radial-gradient(ellipse at center, #49c0f0 10%,#005cad 100%);
+}
+
+
+
+
+
+
